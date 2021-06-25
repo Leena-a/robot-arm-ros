@@ -71,7 +71,7 @@ $ sudo apt install git
 $ git clone https://github.com/smart-methods/arduino_robot_arm 
 ```
 
-Dependencies 
+### Dependencies 
 ```
 $ cd ~/robot-arm
 $ rosdep install --from-paths src --ignore-src -r -y
@@ -80,7 +80,7 @@ $ sudo apt-get install ros-melodic-joint-state-publisher ros-melodic-joint-state
 $ sudo apt-get install ros-melodic-gazebo-ros-control joint-state-publisher
 $ sudo apt-get install ros-melodic-ros-controllers ros-melodic-ros-control
 ```
-Compilation 
+### Compilation 
 ```
 $ catkin_make
 ```
@@ -92,5 +92,33 @@ $ roslaunch robot_arm_pkg check_motors.launch
 ![VirtualBox_Ubuntu 18 04 5_25_06_2021_17_32_38](https://user-images.githubusercontent.com/52850659/123443032-2f6c1300-d5de-11eb-8c8f-144e80d8aaf2.png)
 
 The package displays the joint positions which are base_joint, shoulder, elbow, and wrist in a window as sliders. Each slider is set to the joints' min and max limits, except for continuous joints. 
+
+
+## Using Arduino with ROS
+> The following steps assumes that the user have Arduino IDE installed on Ubuntu 18.04.
+
+1- Install rosserial for Arduino:
+```
+$ sudo apt-get install ros-melodic-rosserial-arduino
+$ sudo apt-get install ros-melodic-rosserial
+```
+
+2- Install ros_lib into the Arduino environment:
+```
+$ cd ~/Arduino/libraries
+$ rm -rf ros_lib
+$ rosrun rosserial_arduino make_libraries.py .
+```
+`Arduino` is the directory where the Linux Arduino environment saves the sketches.
+
+3- Upload the Arduino code.
+
+## Simulation
+
+The following command starts the joint_state_publisher using RViz
+```
+$ roslaunch robot_arm_pkg check_motors.launch
+```
+
 
 
