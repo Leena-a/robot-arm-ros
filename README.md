@@ -85,11 +85,11 @@ Compilation
 $ catkin_make
 ```
 
-Controlling the robot arm using joint_state_publisher
+Controlling the robot arm using joint_state_publisher:
 ```
 $ roslaunch robot_arm_pkg check_motors.launch
 ```
-![image](https://user-images.githubusercontent.com/52850659/123440485-82909680-d5db-11eb-9d8b-6be8da7ef07d.png)
+![VirtualBox_Ubuntu 18 04 5_25_06_2021_17_32_38](https://user-images.githubusercontent.com/52850659/123443032-2f6c1300-d5de-11eb-8c8f-144e80d8aaf2.png)
 
 The package displays the joint positions which are base_joint, shoulder, elbow, and wrist in a window as sliders. Each slider is set to the joints' min and max limits, except for continuous joints. 
 
