@@ -94,7 +94,7 @@ $ roslaunch robot_arm_pkg check_motors.launch
 The package displays the joint positions which are base_joint, shoulder, elbow, and wrist in a window as sliders. Each slider is set to the joints' min and max limits, except for continuous joints. 
 
 
-## Using Arduino with ROS
+### Using Arduino with ROS
 > The following steps assumes that the user have Arduino IDE installed on Ubuntu 18.04.
 
 1- Install rosserial for Arduino:
