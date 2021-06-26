@@ -115,10 +115,13 @@ $ rosrun rosserial_arduino make_libraries.py .
 
 ## Simulation
 
-The following command starts the joint_state_publisher using RViz
+The following commands start simulating the robot arm using RViz and Gazebo; the motors are controlled via joint_state_publisher, as can be seen below:
 ```
 $ roslaunch robot_arm_pkg check_motors.launch
+$ roslaunch robot_arm_pkg check_motors_gazebo.launch
+$ rosrun robot_arm_pkg joint_states_to_gazebo.py
 ```
+
 
 
 
