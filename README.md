@@ -122,6 +122,30 @@ $ roslaunch robot_arm_pkg check_motors_gazebo.launch
 $ rosrun robot_arm_pkg joint_states_to_gazebo.py
 ```
 
+![videotogif](https://user-images.githubusercontent.com/52850659/123521175-ccea4400-d6bd-11eb-88de-6c262bd43f35.gif)
 
+                                                          Gazebo |  RViz
+                                                          
+### MoveIt
+Used for kinematics, motion planning, trajectory processing and controlling the robot.
 
+To run the robot arm using MoveIt package:
+```
+$ roslaunch moveit_pkg demo.launch
+```
+
+To launch MoveIt with Gazebo simulator use the following command:
+```
+$ roslaunch moveit_pkg demo_gazebo.launch
+```
+
+Connecting with Arduino:
+```
+$ roslaunch moveit_pkg demo.launch
+$ rosrun rosserial_python serial_node.py _port:=/dev/ttyUSB0 _baud:=115200
+```
+
+![MoveIt](https://user-images.githubusercontent.com/52850659/123521641-a4177e00-d6c0-11eb-924c-b0c5d289972c.png)
+
+Using MoveIt the target position can be controlled and updated, than the planned and executed.
 
