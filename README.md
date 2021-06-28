@@ -1,4 +1,4 @@
-# robot_arm_ros
+# robot-arm-ros
 Installation steps of ROS package that can be used to plan and execute motion trajectories for a robot arm in simulation and real life.
 
 The steps below uses ROS melodic, 1.14.11 version which runs on ubuntu 18.04.5.
