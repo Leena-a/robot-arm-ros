@@ -1,4 +1,4 @@
-# robot-arm-ros
+# robot_arm_ros
 Installation steps of ROS package that can be used to plan and execute motion trajectories for a robot arm in simulation and real life.
 
 The steps below uses ROS melodic, 1.14.11 version which runs on ubuntu 18.04.5.
@@ -124,7 +124,7 @@ $ rosrun robot_arm_pkg joint_states_to_gazebo.py
 
 ![videotogif](https://user-images.githubusercontent.com/52850659/123521175-ccea4400-d6bd-11eb-88de-6c262bd43f35.gif)
 
-                                                       Gazebo |  RViz
+>Gazebo |  RViz
                                                           
 ### MoveIt
 MoveIt is a motion planning framework used for kinematics, motion planning, trajectory processing and controlling the robot.
